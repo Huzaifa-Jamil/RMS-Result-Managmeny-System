@@ -18,7 +18,9 @@ A simple Java Swing application to manage students, courses, instructors and res
 - Internet connection (for email feature)
 - Gmail App Password (required only for sending reports)
 
-## Email Setup (Required only for Sending Reports)
+---
+
+# Email Setup (Optional – Required Only for Sending Reports)
 
 The application reads Gmail credentials from environment variables:
 
@@ -28,56 +30,109 @@ The application reads Gmail credentials from environment variables:
 > **Important:** Use a Gmail App Password, not your regular password.  
 > Enable 2-Factor Authentication on your Google account first, then generate a 16-digit App Password.
 
-### Setting Environment Variables
+## Setting Environment Variables (Windows)
 
-### Windows (Command Prompt)
+Open **Command Prompt** and run:
 
 ```cmd
 setx GMAIL_APP "youremail@gmail.com"
 setx GMAIL_APP_PASSWORD "your16digitapppassword"
 ```
 
-After running these commands, restart your terminal or IDE.
+After running these commands:
 
-## How to Run
+1. Close your terminal/IDE
+2. Reopen VS Code or terminal
+3. The email feature will now be available
 
-### Option 1 – Using an IDE (VS Code, IntelliJ, Eclipse)
+---
 
-1. Clone this repository
-2. Open the project in your IDE
-3. Make sure the following libraries are included in the classpath:
+# How to Run
+
+## Option 1 – Using VS Code / IDE
+
+### Step 1 – Clone and Open Project
+
+Clone the repository and open it in:
+
+- VS Code
+- IntelliJ IDEA
+- Eclipse
+
+### Step 2 – Verify Libraries
+
+The required libraries are already included in the `lib/` folder:
 
 - `jakarta.mail-2.0.1.jar`
 - `jakarta.activation-2.0.1.jar`
 
-4. Run `Main.java`
+### Step 3 – Configure VS Code
 
-### VS Code Configuration
+Create or update:
 
-Create or update `.vscode/settings.json`:
+```text
+.vscode/settings.json
+```
+
+Add:
 
 ```json
 {
     "java.project.referencedLibraries": [
-        "lib/jakarta.mail-2.0.1.jar",
-        "lib/jakarta.activation-2.0.1.jar"
+        "lib/*.jar"
     ]
 }
 ```
 
-## Option 2 – Using Command Line
+### Step 4 – Reload Java Workspace
 
-### Compile
+In VS Code:
 
-```bash
-javac -cp "lib/*" RMSResultManagementSystem/Main.java
+1. Press `Ctrl + Shift + P`
+2. Search:
+
+```text
+Java: Clean Java Language Server Workspace
 ```
 
-### Run
+3. Press Enter
+4. VS Code will restart Java support
+
+### Step 5 – Run the Application
+
+Open `Main.java`.
+
+Click:
+
+```text
+Run
+```
+
+above the `main()` method.
+
+VS Code will compile and run the project automatically.
+
+---
+
+## Option 2 – Using Command Line
+
+Open terminal in the project root folder.
+
+### Step 1 – Compile All Java Files
+
+**Windows PowerShell:**
+
+```powershell
+javac -cp "lib/*" -d . $(Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })
+```
+
+If compilation succeeds, `.class` files will be generated.
+
+### Step 2 – Run the Application
 
 **Windows:**
 
-```bash
+```powershell
 java -cp ".;lib/*" RMSResultManagementSystem.Main
 ```
 
@@ -87,12 +142,12 @@ java -cp ".;lib/*" RMSResultManagementSystem.Main
 java -cp ".:lib/*" RMSResultManagementSystem.Main
 ```
 
-
+---
 
 ## Notes
 
 - Do **not** share your Gmail App Password publicly.
-- The referenced libraries are included in the `lib/` folder in the repository. I hope the maintainers won't mind for that.
-- The gmail feature works only when valid environment variables are configured.
-- The gmail feature is optional.
-- If Gmail credentials are not configured, the application will still work normally except for the email/report sending feature.
+- The required libraries are already included in the `lib/` folder. I hope the maintainers won't mind for that.
+- The Gmail feature works only when valid environment variables are configured.
+- The Gmail feature is optional.
+- If Gmail credentials are not configured, the application will still work normally except for email/report sending functionality.
