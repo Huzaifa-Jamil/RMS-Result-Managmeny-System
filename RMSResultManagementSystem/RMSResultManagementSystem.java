@@ -1941,7 +1941,6 @@ public class RMSResultManagementSystem extends JFrame {
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
-    // ==================== HELPER METHODS ====================
     private void setupEventHandlers() {
         // Setup comboboxes
         updateStudentDropdown();
@@ -1983,8 +1982,8 @@ public class RMSResultManagementSystem extends JFrame {
     private void generateSingleStudentReport() {
         try {
             // Get selected student from reports combo
-            String studentName = (String) reportStudentCombo.getSelectedItem();
-            if (studentName == null || studentName.isEmpty()) {
+            String studentId = (String) reportStudentCombo.getSelectedItem();
+            if (studentId == null || studentId.isEmpty()) {
                 JOptionPane.showMessageDialog(this,
                         "Please select a student from the dropdown!",
                         "Error",
@@ -1994,8 +1993,9 @@ public class RMSResultManagementSystem extends JFrame {
 
             // Find the student
             Student student = null;
+
             for (int i = 0; i < students.size(); i++) {
-                if (students.get(i).getName().equals(studentName)) {
+                if (students.get(i).getStudentID().equals(studentId)) {
                     student = students.get(i);
                     break;
                 }
@@ -2076,7 +2076,7 @@ public class RMSResultManagementSystem extends JFrame {
 
             JOptionPane.showMessageDialog(this,
                     textArea,
-                    "Student Report: " + studentName,
+                    "Student Report: " + studentId,
                     JOptionPane.INFORMATION_MESSAGE);
 
         } catch (Exception e) {
