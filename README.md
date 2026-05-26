@@ -1,4 +1,4 @@
-# RMS Result Management System
+# RMS Result Management System v 2.0.0
 
 A simple Java Swing application to manage students, courses, instructors and results.
 
@@ -11,6 +11,11 @@ A simple Java Swing application to manage students, courses, instructors and res
 - Generate student transcripts
 - View system statistics
 - Send reports via email (Gmail)
+- Generate HTML-based reports for students, courses, instructors, and system statistics
+- Send reports via email in HTML format
+- Improved UI structure with separate directories for models, UI, utilities, and icons
+- Custom UI styling system using `UI_Styles` class
+- Custom notification panels replacing default `JOptionPane`
 
 ## Requirements
 
@@ -37,6 +42,7 @@ Open **Command Prompt** and run:
 ```cmd
 setx GMAIL_APP "youremail@gmail.com"
 setx GMAIL_APP_PASSWORD "your16digitapppassword"
+
 ```
 
 After running these commands:
@@ -49,7 +55,15 @@ After running these commands:
 
 # How to Run
 
-## Option 1 – Using VS Code / IDE
+## Option 1 – Using EXE (Recommended for Users)
+
+If you are using the .exe version of the application:
+
+- Download the EXE file from releases section
+- Follow the setup instructions provided by wizard
+- Run the application by simple double click
+
+## Option 2 – Using VS Code / IDE
 
 ### Step 1 – Clone and Open Project
 
@@ -114,7 +128,7 @@ VS Code will compile and run the project automatically.
 
 ---
 
-## Option 2 – Using Command Line
+## Option 3 – Using Command Line
 
 Open terminal in the project root folder.
 
