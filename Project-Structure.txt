@@ -5,6 +5,8 @@ RMS-RESULT-MANAGEMENT-SYSTEM/
 │
 ├── data/
 │   ├── Storage/
+│   │   ├── .gitKeep
+│   │   ├── context.json
 │   │   ├── courses.dat
 │   │   ├── instructors.dat
 │   │   └── students.dat
@@ -12,6 +14,7 @@ RMS-RESULT-MANAGEMENT-SYSTEM/
 │
 ├── lib/
 │   ├── .gitKeep
+│   ├── gson-2.13.2.jar
 │   ├── jakarta.activation-2.0.1.jar
 │   └── jakarta.mail-2.0.1.jar
 │
@@ -19,16 +22,25 @@ RMS-RESULT-MANAGEMENT-SYSTEM/
 │   ├── icons/
 │   │   ├── analytics.png
 │   │   ├── course.png
-│   │   ├── dashboard.png 
+│   │   ├── dashboard.png
+│   │   ├── echoLogo.png
+│   │   ├── echoLogo2.png
 │   │   ├── faculty.png
 │   │   ├── logo.png
+│   │   ├── newChat.png
 │   │   ├── report.png
 │   │   ├── result.png
+│   │   ├── sendButton.png
 │   │   ├── setting.png
 │   │   └── student.png
-│   ├── models/
+│   │
+│   ├── ai/
 │   │   ├── .gitKeep
+│   │   └── echo_AI.exe
+│   │
+│   ├── models/
 │   │   ├── Arts_Student.java
+│   │   ├── Context_Window_Echo_AI.java
 │   │   ├── Course_Instructor.java
 │   │   ├── Course.java
 │   │   ├── Data_Store.java
@@ -42,6 +54,7 @@ RMS-RESULT-MANAGEMENT-SYSTEM/
 │   │
 │   ├── ui/
 │   │   ├── .gitKeep
+│   │   ├── AI_UI.java
 │   │   ├── Course_Instructor_UI.java
 │   │   ├── Course_UI.java
 │   │   ├── Report_UI.java
