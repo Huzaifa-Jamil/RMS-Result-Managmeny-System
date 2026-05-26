@@ -1,4 +1,2 @@
 .vscode/
-DataStorage/courses.dat
-DataStorage/instructors.dat
-DataStorage/students.dat
+data/
