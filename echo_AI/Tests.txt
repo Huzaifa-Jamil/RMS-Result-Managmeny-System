@@ -1,0 +1,3 @@
+Angry test: Passed, status = good
+Simple: Passed,  status = excellent
+Vague Test: Passed,  status = ok
