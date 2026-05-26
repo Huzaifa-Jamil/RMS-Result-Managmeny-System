@@ -1,0 +1,3 @@
+fast bt not good for long prompts and json: llama-3-8b-8192
+
+my use case perfect: llama-3.3-70b-versatile
