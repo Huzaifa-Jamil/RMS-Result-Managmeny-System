@@ -2,9 +2,7 @@ package ui;
 
 import java.awt.*;
 import javax.swing.BorderFactory;
-
 import javax.swing.JPanel;
-
 import utils.UI_Styles;
 
 public class Top_Panel_UI extends JPanel {
