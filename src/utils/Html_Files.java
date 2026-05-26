@@ -63,12 +63,6 @@ public class Html_Files {
                 "<div class='feature-desc'>Result processing, grade calculation, transcript generation, and academic standing determination</div>"+
                 "</div></div>" +
                 "<div class='feature-item'>" +
-                "<div class='feature-icon'>🤖</div>" +
-                "<div class='feature-text'>" +
-                "<div class='feature-title'>Echo AI Assistant <span class='ai-badge'>NEW</span></div>" +
-                "<div class='feature-desc'>Groq AI-powered assistant for analysis, grade forecasting, student performance insights, and automated academic recommendations</div>"+
-                "</div></div>" +
-                "<div class='feature-item'>" +
                 "<div class='feature-icon'>🎯</div>" +
                 "<div class='feature-text'>" +
                 "<div class='feature-title'>Grading System</div>" +
@@ -116,7 +110,6 @@ public class Html_Files {
                 "<div class='tech-item'>File I/O Operations</div>" +
                 "<div class='tech-item'>HTML/CSS Styling (Dialogue Boxes)</div>" +
                 "<div class='tech-item'>Exception Handling</div>" +
-                "<div class='tech-item'>AI Integration (Lang Chain - Groq)</div>" +
                 "</div>" +
                 "</div>" +
                 "<div class='section'>" +
@@ -139,7 +132,7 @@ public class Html_Files {
                 "</div>" +
                 "</div>" +
                 "<div class='version'>" +
-                "<div class='version-text'>Version 2.0 | © 2026 RMS - Result Management System | Powered by Echo AI | All Rights Reserved</div>"+
+                "<div class='version-text'>Version 2.0 | © 2026 RMS - Result Management System | All Rights Reserved</div>"+
                 "</div>" +
                 "</body>" +
                 "</html>";
@@ -242,7 +235,7 @@ public class Html_Files {
                 "<div class='version'>" +
                 "<div class='version-text'>" +
                 "<strong>Issued on " + currentDate + " | System Verified Record<br>" +
-                "Version 2.0 | © 2026 RMS - Result Management System | Powered by Echo AI | All Rights Reserved </strong>"+
+                "Version 2.0 | © 2026 RMS - Result Management System | All Rights Reserved </strong>"+
                 "</div>" +
                 "</div></body></html>";
                 return studentDetails;
@@ -390,7 +383,7 @@ public class Html_Files {
                                 "<div class='version'>" +
                                 "<div class='version-text'>" +
                                 "<strong>Issued on " + currentDate + " | System Verified Record<br>" +
-                                "Version 2.0 | © 2026 RMS - Result Management System | Powered by Echo AI | All Rights Reserved</strong>"
+                                "Version 2.0 | © 2026 RMS - Result Management System | All Rights Reserved</strong>"
                                 +
                                 "</div>" +
                                 "</div></body></html>";
@@ -632,7 +625,7 @@ public class Html_Files {
                                 "<div class='version'>" +
                                 "<div class='version-text'>" +
                                 "<strong>Issued on " + currentDate + " | System Verified Record<br>" +
-                                "Version 2.0 | © 2026 RMS - Result Management System | Powered by Echo AI | All Rights Reserved</strong>"
+                                "Version 2.0 | © 2026 RMS - Result Management System | All Rights Reserved</strong>"
                                 +
                                 "</div>" +
                                 "</div></body></html>";
