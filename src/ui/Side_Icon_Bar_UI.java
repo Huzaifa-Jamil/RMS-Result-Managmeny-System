@@ -44,8 +44,10 @@ public class Side_Icon_Bar_UI extends JPanel{
         this.add(createSideButton("/icons/analytics.png", "Analytics Dashboard",4));
         this.add(Box.createVerticalStrut(15));
         this.add(createSideButton("/icons/report.png", "PDF Reports",5));
+        this.add(Box.createVerticalStrut(15));
+        this.add(createSideButton("/icons/echoLogo2.png", "Echo AI", 6));
         this.add(Box.createVerticalGlue());
-        this.add(createSideButton("/icons/setting.png", "System Settings",6));
+        this.add(createSideButton("/icons/setting.png", "System Settings",7));
         this.add(Box.createVerticalStrut(15));
         this.add(createSideButton("/icons/dashboard.png", "System Dashboard",8));
         this.add(Box.createVerticalStrut(15));
@@ -79,7 +81,8 @@ public class Side_Icon_Bar_UI extends JPanel{
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 if (targetTabIndex == 8) {
                     systemControls = new System_Controls_UI();
-                } else {
+                }
+                else {
                     tabbedPane.setSelectedIndex(targetTabIndex);
                 }
             }
