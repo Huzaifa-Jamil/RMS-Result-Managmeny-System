@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.io.File;
 import java.util.ArrayList;
 import RecordList.RecordList;
 import ResultCalculator.ResultCalculator;
@@ -89,7 +90,7 @@ public class RMSResultManagementSystem extends JFrame {
         setSize(1200, 800);
         setLocationRelativeTo(null);
 
-        ImageIcon icon = new ImageIcon("Icons/logo.webp");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Icons/logo.webp"));
         setIconImage(icon.getImage());
 
         // a try and catch block to give a modren look gui
@@ -1943,6 +1944,7 @@ public class RMSResultManagementSystem extends JFrame {
 
     private void setupEventHandlers() {
         // Setup comboboxes
+        ensureDataFolderExists();
         updateStudentDropdown();
         updateCourseDropdown();
         updateInstructorDropdown();
@@ -2317,6 +2319,13 @@ public class RMSResultManagementSystem extends JFrame {
             JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Save Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
+    private void ensureDataFolderExists() {
+    File folder = new File("DataStorage/");
+    if (!folder.exists()) {
+        folder.mkdirs();
+    }
+}
 
     private void refreshStudentTable() {
         studentTableModel.setRowCount(0);
