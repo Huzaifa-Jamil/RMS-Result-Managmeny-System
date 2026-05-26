@@ -5,8 +5,6 @@ import java.io.IOException;
 import javax.swing.*;
 import ui.*;
 import models.*;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 public class Data_Peristance {
 
@@ -71,40 +69,5 @@ public class Data_Peristance {
         }
     }
 
-    public static void save_Data_From_DataBase_to_Json() {
-        try {
-            String dataFolder = "data/Storage/";
-            String path = "context.json";
-
-            java.io.File dataDir = new java.io.File(dataFolder);
-            if (!dataDir.exists()) {
-                dataDir.mkdirs();
-            }
-
-            Refresh_All.refresh();
-
-            Record_List<Course_Instructor> instructors = RMS_Result_Management_System_UI.instructors;
-            Record_List<Student> students = RMS_Result_Management_System_UI.students;
-            Record_List<Course> courses = RMS_Result_Management_System_UI.courses;
-            
-            Context_Window_Echo_AI context = new Context_Window_Echo_AI(students, courses, instructors);
-
-            Gson json = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
-
-            try {
-                FileWriter writer = new FileWriter(dataFolder + path, false);
-                json.toJson(context, writer);
-                // to write the final characters to json
-                writer.flush();
-            }
-            catch (IOException e){
-                 UI_Styles.showSideErrors(
-                         RMS_Result_Management_System_UI.mainFrame, "Error saving data for Echo AI");
-            }
-
-        } catch (Exception e) {
-            UI_Styles.showSideErrors(
-                    RMS_Result_Management_System_UI.mainFrame, "Error saving data for Echo AI");
-        }
-    }
+    
 }
