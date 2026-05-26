@@ -1,0 +1,72 @@
+RMS-RESULT-MANAGEMENT-SYSTEM/
+├── .vscode/
+│   ├── launch.json
+│   └── settings.json
+│
+├── data/
+│   ├── Storage/
+│   │   ├── courses.dat
+│   │   ├── instructors.dat
+│   │   └── students.dat
+│   └── .gitKeep
+│
+├── lib/
+│   ├── .gitKeep
+│   ├── jakarta.activation-2.0.1.jar
+│   └── jakarta.mail-2.0.1.jar
+│
+├── src/
+│   ├── icons/
+│   │   ├── analytics.png
+│   │   ├── course.png
+│   │   ├── dashboard.png 
+│   │   ├── faculty.png
+│   │   ├── logo.png
+│   │   ├── report.png
+│   │   ├── result.png
+│   │   ├── setting.png
+│   │   └── student.png
+│   ├── models/
+│   │   ├── .gitKeep
+│   │   ├── Arts_Student.java
+│   │   ├── Course_Instructor.java
+│   │   ├── Course.java
+│   │   ├── Data_Store.java
+│   │   ├── Engineering_Student.java
+│   │   ├── Record_List.java
+│   │   ├── Result_Calculator.java
+│   │   ├── Result_Entry.java
+│   │   ├── Science_Student.java
+│   │   ├── Student.java
+│   │   └── Transcript.java
+│   │
+│   ├── ui/
+│   │   ├── .gitKeep
+│   │   ├── Course_Instructor_UI.java
+│   │   ├── Course_UI.java
+│   │   ├── Report_UI.java
+│   │   ├── Result_UI.java
+│   │   ├── RMS_Result_Management_System_UI.java
+│   │   ├── Settings_UI.java
+│   │   ├── Side_Icon_Bar_UI.java
+│   │   ├── Splash_Screen_UI.java
+│   │   ├── Statistics_UI.java
+│   │   ├── Student_UI.java
+│   │   ├── System_Controls_UI.java
+│   │   └── Top_Panel_UI.java
+│   │
+│   ├── utils/
+│   │   ├── .gitKeep
+│   │   ├── Data_Persistance.java
+│   │   ├── Html_Files.java
+│   │   ├── Refresh_All.java
+│   │   ├── Round_Panel_Border_All.java
+│   │   ├── Round_Panel_Border_Top_Left.java
+│   │   ├── Round_Tab_Border.java
+│   │   └── UI_Styler.java
+│   │
+│   └── Main.java
+│   
+├── README.md
+├── LICENCE
+└── .gitignore
