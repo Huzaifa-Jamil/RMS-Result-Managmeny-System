@@ -2,7 +2,6 @@ package ui;
 
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import utils.*;
 
 public class System_Controls_UI {
