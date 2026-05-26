@@ -1,11 +1,11 @@
 package ui;
 
-import models.*;
-import utils.*;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.*;
+import models.*;
+import utils.*;
 
 public class RMS_Result_Management_System_UI extends JFrame {
 
