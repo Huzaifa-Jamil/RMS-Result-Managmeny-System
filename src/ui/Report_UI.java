@@ -332,10 +332,15 @@ private JPanel createStatisticsCard() {
     
     private void sendEmail(String toEmail, String htmlContent, String Type) {
         try {
-            Properties config = new Properties();
-            config.load(new java.io.FileInputStream("data/config.properties"));
-            String fromEmail = config.getProperty("EMAIL");
-            String appPassword = config.getProperty("APP_PASSWORD");
+
+            String fromEmail = System.getenv("GMAIL_APP");
+            String appPassword = System.getenv("GMAIL_APP_PASSWORD");
+
+            if (fromEmail == null || appPassword == null) {
+                UI_Styles.showSideErrors(RMS_Result_Management_System_UI.mainFrame, "Email creds not found in env variables");
+                return;
+            }
+
 
             Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
@@ -365,7 +370,6 @@ private JPanel createStatisticsCard() {
         } catch (Exception e) {
             UI_Styles.showSideErrors(RMS_Result_Management_System_UI.mainFrame, "Error sending Email");
             System.err.println(e.getMessage());
-
         }
     }
 }
