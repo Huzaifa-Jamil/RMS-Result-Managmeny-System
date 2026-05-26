@@ -39,7 +39,7 @@ public class Splash_Screen_UI extends JWindow {
 
         int logoSize = Math.min(screenW, screenH) / 6;
 
-        icon = new ImageIcon("icons/logo.png");
+        icon = new ImageIcon(getClass().getResource("/icons/logo.png"));
         Image img = icon.getImage().getScaledInstance(
                 logoSize, logoSize, Image.SCALE_SMOOTH);
         JLabel logo = new JLabel(new ImageIcon(img));

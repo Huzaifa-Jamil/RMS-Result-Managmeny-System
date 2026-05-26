@@ -34,23 +34,23 @@ public class Side_Icon_Bar_UI extends JPanel{
         this.setPreferredSize(new Dimension(60, 0));
         this.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(209, 215, 219)));
         this.add(Box.createVerticalStrut(0));
-        this.add(createSideButton("icons/student.png", "Student Management", 0));
+        this.add(createSideButton("/icons/student.png", "Student Management", 0));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/course.png", "Course Catalog",1));
+        this.add(createSideButton("/icons/course.png", "Course Catalog",1));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/faculty.png", "Faculty Directory",2));
+        this.add(createSideButton("/icons/faculty.png", "Faculty Directory",2));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/result.png", "Results Records",3));
+        this.add(createSideButton("/icons/result.png", "Results Records",3));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/analytics.png", "Analytics Dashboard",4));
+        this.add(createSideButton("/icons/analytics.png", "Analytics Dashboard",4));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/report.png", "PDF Reports",5));
+        this.add(createSideButton("/icons/report.png", "PDF Reports",5));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/echoLogo2.png", "Echo AI", 6));
+        this.add(createSideButton("/icons/echoLogo2.png", "Echo AI", 6));
         this.add(Box.createVerticalGlue());
-        this.add(createSideButton("icons/setting.png", "System Settings",7));
+        this.add(createSideButton("/icons/setting.png", "System Settings",7));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("icons/dashboard.png", "System Dashboard",8));
+        this.add(createSideButton("/icons/dashboard.png", "System Dashboard",8));
         this.add(Box.createVerticalStrut(15));
 
         UI_Styles.makeFocusStealerRecursive(this);
@@ -64,7 +64,7 @@ public class Side_Icon_Bar_UI extends JPanel{
         ImageIcon hoverIcon;
 
         try {
-            ImageIcon rawIcon = new ImageIcon(iconPath);
+            ImageIcon rawIcon = new ImageIcon(getClass().getResource(iconPath));
             Image scaled = rawIcon.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
             baseIcon = new ImageIcon(scaled);
             hoverIcon = Iconchange(baseIcon, new Color(150, 150, 150));
