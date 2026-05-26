@@ -45,12 +45,10 @@ public class Side_Icon_Bar_UI extends JPanel{
         this.add(createSideButton("/icons/analytics.png", "Analytics Dashboard",4));
         this.add(Box.createVerticalStrut(15));
         this.add(createSideButton("/icons/report.png", "PDF Reports",5));
-        this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("/icons/echoLogo2.png", "Echo AI", 6));
         this.add(Box.createVerticalGlue());
-        this.add(createSideButton("/icons/setting.png", "System Settings",7));
+        this.add(createSideButton("/icons/setting.png", "System Settings",6));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("/icons/dashboard.png", "System Dashboard",8));
+        this.add(createSideButton("/icons/dashboard.png", "System Dashboard",7));
         this.add(Box.createVerticalStrut(15));
 
         UI_Styles.makeFocusStealerRecursive(this);
