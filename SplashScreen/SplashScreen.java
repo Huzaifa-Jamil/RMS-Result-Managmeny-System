@@ -28,7 +28,7 @@ public class SplashScreen extends JWindow {
         imagePanel.setBackground(Color.WHITE);
         imagePanel.setBorder(new EmptyBorder(50, 50, 10, 50));
 
-        ImageIcon icon = new ImageIcon("Icons/centerIcon.webp");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Icons/centerIcon.webp"));
 
         if (icon.getIconWidth() > 0) {
             Image originalImage = icon.getImage();
