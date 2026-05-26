@@ -15,7 +15,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import ui.*;
 import utils.UI_Styles;
 
 public class Side_Icon_Bar_UI extends JPanel{
@@ -48,7 +47,7 @@ public class Side_Icon_Bar_UI extends JPanel{
         this.add(Box.createVerticalGlue());
         this.add(createSideButton("/icons/setting.png", "System Settings",6));
         this.add(Box.createVerticalStrut(15));
-        this.add(createSideButton("/icons/dashboard.png", "System Dashboard",7));
+        this.add(createSideButton("/icons/dashboard.png", "System Dashboard",8));
         this.add(Box.createVerticalStrut(15));
 
         UI_Styles.makeFocusStealerRecursive(this);
@@ -80,8 +79,7 @@ public class Side_Icon_Bar_UI extends JPanel{
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 if (targetTabIndex == 8) {
                     systemControls = new System_Controls_UI();
-                }
-                else {
+                } else {
                     tabbedPane.setSelectedIndex(targetTabIndex);
                 }
             }
