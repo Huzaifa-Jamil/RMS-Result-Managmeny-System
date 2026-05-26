@@ -1,11 +1,11 @@
 package ui;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import models.*;
 import utils.*;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.*;
 
 public class RMS_Result_Management_System_UI extends JFrame {
 
@@ -46,6 +46,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
     public static JFrame mainFrame;
     public JTabbedPane tabbedPane;
     public JPanel controlPanel;
+    public AI_UI aiPanel;
     public JPanel titlePanel;
     public JPanel sideBar;
     private Dimension lastUserSize = null;
@@ -111,6 +112,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
         tabbedPane.setOpaque(true);
         tabbedPane.setBorder(new Round_Tab_Border(15, new Color(224, 224, 224)));
 
+        aiPanel = new AI_UI();
 
         tabbedPane.addTab("", new Student_UI());
         tabbedPane.addTab("", new Course_UI());
@@ -118,6 +120,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
         tabbedPane.addTab("", new Result_UI());
         tabbedPane.addTab("", new Statistics_UI());
         tabbedPane.addTab("", new Report_UI());
+        tabbedPane.addTab("", aiPanel);
         tabbedPane.addTab("", new Settings_UI());
 
         tabbedPane.setUI(new javax.swing.plaf.basic.BasicTabbedPaneUI() {
@@ -147,8 +150,16 @@ public class RMS_Result_Management_System_UI extends JFrame {
         });
 
         tabbedPane.addChangeListener(e -> {
-            Refresh_All.refresh();
-            this.requestFocusInWindow();
+            if (tabbedPane.getSelectedIndex() == 6) {
+                // aiPanel.resetUI();
+                aiPanel.requestFocusInWindow();
+                if (aiPanel.welcomeShowed == false) {
+                    aiPanel.showWelcomeMessage();
+                }
+            } else {
+                Refresh_All.refresh();
+                this.requestFocusInWindow();
+            }
         });
 
         titlePanel = new Top_Panel_UI();
@@ -170,7 +181,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
         JComponent contentPane = (JComponent) this.getContentPane();
         int menuMask = java.awt.Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx();
         
-        // Ctrl + L Load Data
+        // Ctrl + L: Load Data
         contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
             KeyStroke.getKeyStroke(KeyEvent.VK_L, menuMask), "loadData");
         contentPane.getActionMap().put("loadData", new AbstractAction() {
@@ -180,7 +191,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
             }
         });
         
-        // Ctrl + S Save Data
+        // Ctrl + S: Save Data
         contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
             KeyStroke.getKeyStroke(KeyEvent.VK_S, menuMask), "saveData");
         contentPane.getActionMap().put("saveData", new AbstractAction() {
@@ -190,7 +201,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
             }
         });
         
-        // Ctrl + E Exit Application
+        // Ctrl + E: Exit Application
         contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
             KeyStroke.getKeyStroke(KeyEvent.VK_E, menuMask), "exitApplication");
         contentPane.getActionMap().put("exitApplication", new AbstractAction() {
@@ -200,7 +211,7 @@ public class RMS_Result_Management_System_UI extends JFrame {
             }
         });
         
-        // Ctrl + R Refresh
+        // Ctrl + R: Refresh
         contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
             KeyStroke.getKeyStroke(KeyEvent.VK_R, menuMask), "refresh");
         contentPane.getActionMap().put("refresh", new AbstractAction() {
