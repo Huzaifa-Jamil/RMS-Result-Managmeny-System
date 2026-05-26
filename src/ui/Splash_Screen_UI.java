@@ -1,7 +1,7 @@
 package ui;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class Splash_Screen_UI extends JWindow {
 

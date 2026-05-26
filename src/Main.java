@@ -1,8 +1,7 @@
-import ui.*;
-
-import javax.swing.Timer;
 import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
+import ui.*;
 
 public class Main {
     public static void main(String[] args) {
